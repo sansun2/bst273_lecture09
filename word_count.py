@@ -21,6 +21,10 @@ print("args = ", args)
 
 print("The name of the data file is", args.data_file)
 
+#-------------------------------------------------------------------------------
+# our code for analyzing the data
+#-------------------------------------------------------------------------------
+
 fh = open(args.data_file)
 
 print("The file handle is", fh)
@@ -33,6 +37,10 @@ for line in fh:
 	lines += 1
 
 print("The number of lines is", lines)
-#-------------------------------------------------------------------------------
-# our code for analyzing the data
-#-------------------------------------------------------------------------------
+
+row = []
+
+for line in fh:
+	row = line.strip().split("\t")
+	for i in range(len(row)):
+		a = row[0]
