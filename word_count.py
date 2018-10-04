@@ -10,10 +10,6 @@ parser.add_argument(
 	help="Path to the file we want to read.",
 )
 
-args = parser.parse_args()
-
-print(args)
-print(args.data_file)
 #-------------------------------------------------------------------------------
 # Are there other arguments we need?
 # Answer: No, we do not need any other arguments.
@@ -21,6 +17,23 @@ print(args.data_file)
 
 args = parser.parse_args( )
 
+print("args = ", args)
+
+print("The name of the data file is", args.data_file)
+
+fh = open(args.data_file)
+
+print("The file handle is", fh)
+
+lines = 0
+words = 0
+chars = 0
+
+for line in fh:
+	print(line)
+	lines += 1
+
+print(lines)
 #-------------------------------------------------------------------------------
 # our code for analyzing the data
 #-------------------------------------------------------------------------------
