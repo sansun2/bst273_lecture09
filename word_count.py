@@ -30,7 +30,6 @@ words = 0
 chars = 0
 
 for line in fh:
-	print(line)
 	lines += 1
 
 print(lines)
