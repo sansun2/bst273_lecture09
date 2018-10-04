@@ -13,7 +13,7 @@ parser.add_argument(
 args = parser.parse_args()
 
 print(args)
-print(args.data_files)
+print(args.data_file)
 #-------------------------------------------------------------------------------
 # Are there other arguments we need?
 # Answer: No, we do not need any other arguments.
