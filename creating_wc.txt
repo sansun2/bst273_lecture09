@@ -1,0 +1,10 @@
+Input = file, Output= #s of lines, words, and bytes/characters.
+
+1) Use argparse to accept a file_name as argument
+2) Read file
+3) Store count of lines, words, and characters.
+3) Go through lines of file. 
+	i) Lines: Split by new line '\n'. Add +1 to lines. 
+	ii) Words: Split lines by spaces. Length of list = # of words in line. Add this number to words.
+	iii) Bytes: Get the length of the line = # of characters. Add the number to characters.
+4) Print #s of l, w, and c.  
