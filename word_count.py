@@ -32,7 +32,7 @@ chars = 0
 for line in fh:
 	lines += 1
 
-print(lines)
+print("The number of lines is", lines)
 #-------------------------------------------------------------------------------
 # our code for analyzing the data
 #-------------------------------------------------------------------------------
