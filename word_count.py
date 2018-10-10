@@ -17,9 +17,9 @@ parser.add_argument(
 
 args = parser.parse_args( )
 
-print("args = ", args)
+#print("args = ", args)
 
-print("The name of the data file is", args.data_file)
+#print("The name of the data file is", args.data_file)
 
 #-------------------------------------------------------------------------------
 # our code for analyzing the data
@@ -27,7 +27,7 @@ print("The name of the data file is", args.data_file)
 
 fh = open(args.data_file)
 
-print("The file handle is", fh)
+#print("The file handle is", fh)
 
 lines = 0
 words = 0
@@ -36,11 +36,11 @@ chars = 0
 for line in fh:
 	lines += 1
 
-print("The number of lines is", lines)
+#print("The number of lines is", lines)
 
 row = []
 
 for line in fh:
-	row = line.strip().split("\t")
-	for i in range(len(row)):
-		a = row[0]
+	row = line.strip().split(" ")
+	a = row[1]
+	print(a)
