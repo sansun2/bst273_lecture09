@@ -13,25 +13,28 @@ QUESTION 1:
 
 What is the output of the `git branch` command?
 ----------
-<paste answer here>
+ Sanjanas-MacBook:bst273_lecture09 Sanjana$ git branch
+  class
+* master
+  sansun
 ----------
 
 How can you tell which branch you're on?
 ----------
-<type answer here>
+The current branch has an asterix next to it. In this case, we are on the master branch.
 ----------
 
 QUESTION 2:
 
 ----------
-$ <enter command here>
-<enter output here>
+$ git remote get-url upstream
+git@github.com:sansun2/bst273_lecture09.git
 ----------
 
 QUESTION 3:
 
 ----------
-$ git remote add <What goes here?>
+$ git remote add kevin https://github.com/kescobo/bst273_lecture09.git
 ----------
 
 """
