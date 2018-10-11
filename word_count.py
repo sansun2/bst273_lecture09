@@ -50,7 +50,8 @@ parser.add_argument(
 parser.add_argument(
     "action",
 	choices=["-l", "-w", "-c"],
-	nargs="+",
+    type = int,
+    nargs = '+',
 	help="choice(s) of statistics to compute [default: mean]",
 )
 
