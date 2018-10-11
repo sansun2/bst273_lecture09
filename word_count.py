@@ -65,6 +65,7 @@ for line in fh:
     lines += 1
     row = line.strip().split()
     words += len(row)
+    chars += len(line)
 
 
 	# ## Question 4a (2 pts)
@@ -145,4 +146,4 @@ for line in fh:
 
 
 
-print("   ", lines, words)
+print("   ", lines, "   ", words, "   ", chars)
