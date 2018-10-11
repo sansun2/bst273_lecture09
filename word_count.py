@@ -47,6 +47,12 @@ parser.add_argument(
 	"data_file",
 	help="path to the file we want to read",
 )
+parser.add_argument(
+    "action"
+	choices=["-l", "-w", "-c"],
+	nargs="+",
+	help="choice(s) of statistics to compute [default: mean]",
+)
 
 #-------------------------------------------------------------------------------
 # Are there other arguments we need?
@@ -147,3 +153,10 @@ for line in fh:
 
 
 print("   ", lines, "   ", words, "   ", chars)
+
+if '-l' in args.action:
+    print(lines)
+if '-w' in args.action:
+    print(words)
+if '-cs' in args.action:
+    print(chars)
