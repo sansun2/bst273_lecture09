@@ -48,7 +48,7 @@ parser.add_argument(
 	help="path to the file we want to read",
 )
 parser.add_argument(
-    "action"
+    "action",
 	choices=["-l", "-w", "-c"],
 	nargs="+",
 	help="choice(s) of statistics to compute [default: mean]",
