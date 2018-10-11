@@ -46,24 +46,17 @@ words = 0
 chars = 0
 parser = argparse.ArgumentParser( description="" )
 
+parser.add_argument(
+    'test',
+    choices = ([], 'l', 'w', 'c'),
+    nargs = '*',
+    type = str,
+)
 
 parser.add_argument(
 	"data_file",
 	help="path to the file we want to read"
 )
-
-parser.add_argument(
-    'test',
-    choices = ('l', 'w', 'c'),
-    nargs = '*',
-    type = str,
-
-)
-
-#    choices = wc,
-#    nargs = "*",
-#    dest = 'l',
-
 
 
 #-------------------------------------------------------------------------------
@@ -172,5 +165,5 @@ if args.test and 'w' in args.test:
     print(words)
 if args.test and 'c' in args.test:
     print(chars)
-#elif NoneType in args.test:
-#    print("   ", lines, "   ", words, "   ", chars)
+if args.test in args.test:
+    print("   ", lines, "   ", words, "   ", chars)
