@@ -64,8 +64,7 @@ row = []
 for line in fh:
     lines += 1
     row = line.strip().split(" ")
-    for l in range(len(row)):
-        words += l
+    words += len(row)
 
 
 	# ## Question 4a (2 pts)
