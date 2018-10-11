@@ -59,9 +59,14 @@ fh = open(args.data_file)
 lines = 0
 words = 0
 chars = 0
+row = []
 
 for line in fh:
-	lines += 1
+    lines += 1
+    row = line.strip().split(" ")
+    for l in range(len(row)):
+        words += l
+
 
 	# ## Question 4a (2 pts)
 	#
@@ -141,4 +146,4 @@ for line in fh:
 
 
 
-print("   ", lines)
+print("   ", lines, words)
