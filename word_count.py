@@ -44,14 +44,15 @@ import argparse
 parser = argparse.ArgumentParser( description="" )
 
 parser.add_argument(
+    '-l',
+#	help="Choice(s) of value to return [default: all]",
+)
+
+parser.add_argument(
 	"data_file",
 	help="path to the file we want to read",
 )
-parser.add_argument(
-    "-l",
-    nargs =1, 
-	help="Choice(s) of value to return [default: all]",
-)
+
 
 #-------------------------------------------------------------------------------
 # Are there other arguments we need?
@@ -153,9 +154,9 @@ for line in fh:
 
 print("   ", lines, "   ", words, "   ", chars)
 
-if '-l' in args.action:
+if '-l' in args.l:
     print(lines)
-if '-w' in args.action:
-    print(words)
-if '-cs' in args.action:
-    print(chars)
+#if '-w' in args.action:
+    #print(words)
+#if '-cs' in args.action:
+    #print(chars)
