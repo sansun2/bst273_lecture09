@@ -42,16 +42,30 @@ $ git remote add kevin https://github.com/kescobo/bst273_lecture09.git
 import argparse
 
 parser = argparse.ArgumentParser( description="" )
-
-parser.add_argument(
-    '-l',
-#	help="Choice(s) of value to return [default: all]",
-)
+subparsers = parser.add_subparsers(help = 'options')
 
 parser.add_argument(
 	"data_file",
-	help="path to the file we want to read",
+	help="path to the file we want to read"
 )
+
+
+option_parser = subparsers.add_parser(
+    'options',
+    help = "Choice(s) of value to return [default: all]"
+)
+
+option_parser.add_argument(
+    'l',
+    choices = ["-l","-w"],
+    action = 'store',
+    help = "prints the number of lines"
+)
+
+#    choices = wc,
+#    nargs = "*",
+#    dest = 'l',
+#	help="Choice(s) of value to return [default: all]",
 
 
 #-------------------------------------------------------------------------------
