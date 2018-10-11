@@ -52,15 +52,15 @@ parser.add_argument(
 )
 parser.add_argument(
     '-l', '--lines',
-    action = store_true,
+    action = "store_true",
 )
 parser.add_argument(
     '-w', '--words',
-    action = store_true,
+    action = "store_true",
 )
 parser.add_argument(
     '-c', '--chars',
-    action = store_true,
+    action = "store_true",
 )
 
 #-------------------------------------------------------------------------------
@@ -159,15 +159,11 @@ for line in fh:
 	# **Hint:** - even though this question is at the end of the homework script,
 	# you probably need to add some stuff to the beginning of the script too.
 
-
-
-#print("   ", lines, "   ", words, "   ", chars)
-
 if args.lines:
     print(lines)
 if args.words:
     print(words)
 if args.chars:
     print(chars)
-else:
+if not (args.lines or args.words or args.chars):
     print("   ", lines, "   ", words, "   ", chars)
