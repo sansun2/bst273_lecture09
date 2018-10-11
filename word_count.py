@@ -63,7 +63,7 @@ row = []
 
 for line in fh:
     lines += 1
-    row = line.strip().split(" ")
+    row = line.strip().split()
     words += len(row)
 
 
