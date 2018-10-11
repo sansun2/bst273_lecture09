@@ -48,8 +48,7 @@ parser.add_argument(
 	help="path to the file we want to read",
 )
 parser.add_argument(
-    "action",
-	choices=["-l", "-w", "-c"],
+    "-l", 
 	help="Choice(s) of value to return [default: all]",
 )
 
