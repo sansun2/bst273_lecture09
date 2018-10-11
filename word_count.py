@@ -48,7 +48,8 @@ parser.add_argument(
 	help="path to the file we want to read",
 )
 parser.add_argument(
-    "-l", 
+    "-l",
+    nargs =1, 
 	help="Choice(s) of value to return [default: all]",
 )
 
