@@ -41,31 +41,29 @@ $ git remote add kevin https://github.com/kescobo/bst273_lecture09.git
 
 import argparse
 
+lines = 0
+words = 0
+chars = 0
 parser = argparse.ArgumentParser( description="" )
-subparsers = parser.add_subparsers(help = 'options')
+
 
 parser.add_argument(
 	"data_file",
 	help="path to the file we want to read"
 )
 
+parser.add_argument(
+    'test',
+    choices = ('l', 'w', 'c'),
+    nargs = '*',
+    type = str,
 
-option_parser = subparsers.add_parser(
-    'options',
-    help = "Choice(s) of value to return [default: all]"
-)
-
-option_parser.add_argument(
-    'l',
-    choices = ["-l","-w"],
-    action = 'store',
-    help = "prints the number of lines"
 )
 
 #    choices = wc,
 #    nargs = "*",
 #    dest = 'l',
-#	help="Choice(s) of value to return [default: all]",
+
 
 
 #-------------------------------------------------------------------------------
@@ -166,11 +164,13 @@ for line in fh:
 
 
 
-print("   ", lines, "   ", words, "   ", chars)
+#print("   ", lines, "   ", words, "   ", chars)
 
-if '-l' in args.l:
+if args.test and 'l' in args.test:
     print(lines)
-#if '-w' in args.action:
-    #print(words)
-#if '-cs' in args.action:
-    #print(chars)
+if args.test and 'w' in args.test:
+    print(words)
+if args.test and 'c' in args.test:
+    print(chars)
+#elif NoneType in args.test:
+#    print("   ", lines, "   ", words, "   ", chars)
