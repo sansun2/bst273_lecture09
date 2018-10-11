@@ -47,17 +47,21 @@ chars = 0
 parser = argparse.ArgumentParser( description="" )
 
 parser.add_argument(
-    'test',
-    choices = ([], 'l', 'w', 'c'),
-    nargs = '*',
-    type = str,
-)
-
-parser.add_argument(
 	"data_file",
 	help="path to the file we want to read"
 )
-
+parser.add_argument(
+    '-l', '--lines',
+    action = store_true,
+)
+parser.add_argument(
+    '-w', '--words',
+    action = store_true,
+)
+parser.add_argument(
+    '-c', '--chars',
+    action = store_true,
+)
 
 #-------------------------------------------------------------------------------
 # Are there other arguments we need?
@@ -159,11 +163,11 @@ for line in fh:
 
 #print("   ", lines, "   ", words, "   ", chars)
 
-if args.test and 'l' in args.test:
+if args.lines:
     print(lines)
-if args.test and 'w' in args.test:
+if args.words:
     print(words)
-if args.test and 'c' in args.test:
+if args.chars:
     print(chars)
-if args.test in args.test:
+else:
     print("   ", lines, "   ", words, "   ", chars)
